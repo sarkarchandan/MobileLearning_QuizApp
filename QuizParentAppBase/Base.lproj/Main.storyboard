@@ -47,7 +47,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="YAT-HK-OGQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="True">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -55,7 +55,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMA-Ax-jw9">
                                         <rect key="frame" x="177" y="85" width="128" height="56"/>
                                         <color key="backgroundColor" red="0.76078431372549016" green="0.21568627450980393" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="False">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -83,11 +83,28 @@
                                             <constraint firstAttribute="width" constant="24" id="ncO-Tr-Mxa"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cex-iF-eSt">
+                                        <rect key="frame" x="221" y="24" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qr4-0r-qgf">
+                                        <rect key="frame" x="8" y="24" width="33" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30196078431372547" green="0.47058823529411764" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="qr4-0r-qgf" firstAttribute="centerY" secondItem="R3w-Lw-mmP" secondAttribute="centerY" id="G4B-xb-Lxk"/>
                                     <constraint firstAttribute="bottom" secondItem="Njx-TN-c7Y" secondAttribute="bottom" id="KSr-F3-lmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cex-iF-eSt" secondAttribute="trailing" constant="8" id="R6e-y0-Q9w"/>
+                                    <constraint firstItem="Cex-iF-eSt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qr4-0r-qgf" secondAttribute="trailing" constant="20" id="RLP-AE-Zxb"/>
                                     <constraint firstItem="Njx-TN-c7Y" firstAttribute="leading" secondItem="R3w-Lw-mmP" secondAttribute="leading" id="s3z-cz-eUB"/>
+                                    <constraint firstItem="Cex-iF-eSt" firstAttribute="centerY" secondItem="R3w-Lw-mmP" secondAttribute="centerY" id="tT0-lU-WSf"/>
+                                    <constraint firstItem="qr4-0r-qgf" firstAttribute="leading" secondItem="R3w-Lw-mmP" secondAttribute="leading" constant="8" id="wwR-b3-iDi"/>
                                 </constraints>
                             </view>
                         </subviews>
