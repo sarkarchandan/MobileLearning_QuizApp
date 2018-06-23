@@ -8,7 +8,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /*Do nothing specific*/
     return YES;
 }
 
