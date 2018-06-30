@@ -1,6 +1,7 @@
 #import "MainViewController.h"
 #import "QuestionBank.h"
 #import "Question.h"
+#import "ProgressHUD.h"
 
 @interface MainViewController ()
 @property(nonatomic,weak) IBOutlet UILabel* questionLabel;
@@ -90,10 +91,11 @@
 {
     if([self pickedAnswer] == [[[[self questionBank] questions]objectAtIndex:[self questionNumber]]answer])
     {
+        [ProgressHUD showSuccess:@"Correct"];
         [self updateScore];
     }else
     {
-        NSLog(@"Wrong Answer");
+        [ProgressHUD showError:@"Wrong"];
     }
 }
 
