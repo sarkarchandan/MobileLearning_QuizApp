@@ -7,43 +7,70 @@
 @property(nonatomic,weak) IBOutlet UILabel* scoreLabel;
 @property(nonatomic,weak) IBOutlet UIView* progressView;
 @property(nonatomic,weak) IBOutlet UILabel* progressLabel;
+@property(nonatomic)NSInteger questionNumber;
+@property(nonatomic)QuestionBank* questionBank;
+@property(nonatomic)BOOL pickedAnswer;
 @end
 
 @implementation MainViewController
-{
-    QuestionBank* questionBank;
-    BOOL pickedAnswer;
-}
 
 -(IBAction)buttonPressed:(UIButton*)sender
 {
     if([sender tag] == 1)
     {
-        pickedAnswer = YES;
+        [self setPickedAnswer:YES];
     }else
     {
-        pickedAnswer = NO;
+        [self setPickedAnswer:NO];
     }
     [self checkAnswer];
+    _questionNumber += 1;
+    [self loadNextQuestion];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    questionBank = [[QuestionBank alloc] init];
-    pickedAnswer = NO;
-    [[self questionLabel] setText: [[[questionBank questions]firstObject]questionText]];
+    _questionBank = [[QuestionBank alloc] init];
+    [self setPickedAnswer:NO];
+    [self setQuestionNumber:0];
+    [self loadNextQuestion];
+}
+
+-(void)loadNextQuestion
+{
+    if ([self questionNumber] < [[[self questionBank] questions] count])
+    {
+        [[self questionLabel] setText: [[[[self questionBank] questions]objectAtIndex:_questionNumber]questionText]];
+    }else
+    {
+        [self createEndOfQuizAlert];
+    }
+}
+
+-(void)createEndOfQuizAlert
+{
+    __weak typeof(self) weakSelf = self;
+    UIAlertController* controller = [UIAlertController alertControllerWithTitle:@"End of Quiz" message:@"The Quiz has been ended, do you want to start over" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* restartAction = [UIAlertAction actionWithTitle:@"Restart" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+                                    {
+                                        [weakSelf setQuestionNumber:0];
+                                        [weakSelf loadNextQuestion];
+                                    }];
+    [controller addAction:restartAction];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 -(void)checkAnswer
 {
-    if(pickedAnswer == [[[questionBank questions]firstObject]answer])
+    if([self pickedAnswer] == [[[[self questionBank] questions]objectAtIndex:[self questionNumber]]answer])
     {
         NSLog(@"Correct Answer");
     }else
     {
         NSLog(@"Wrong Answer");
     }
+    
 }
 
 @end
