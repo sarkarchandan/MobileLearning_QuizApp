@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1712256C20E1B9EC00D4CE81 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1712256B20E1B9EC00D4CE81 /* Question.swift */; };
+		1712256E20E1BC3C00D4CE81 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1712256D20E1BC3C00D4CE81 /* QuestionBank.swift */; };
+		178B6F8620E6FAA000CAE7C9 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B6F8520E6FAA000CAE7C9 /* Question.m */; };
+		178B6F8920E6FB8700CAE7C9 /* QuestionBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B6F8820E6FB8700CAE7C9 /* QuestionBank.m */; };
 		17DD7CA920DED85C0041516B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DD7CA820DED85C0041516B /* AppDelegate.m */; };
 		17DD7CAC20DED85C0041516B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DD7CAB20DED85C0041516B /* MainViewController.m */; };
 		17DD7CAF20DED85C0041516B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17DD7CAD20DED85C0041516B /* Main.storyboard */; };
@@ -27,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1712256B20E1B9EC00D4CE81 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1712256D20E1BC3C00D4CE81 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		178B6F8420E6FAA000CAE7C9 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		178B6F8520E6FAA000CAE7C9 /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		178B6F8720E6FB8700CAE7C9 /* QuestionBank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionBank.h; sourceTree = "<group>"; };
+		178B6F8820E6FB8700CAE7C9 /* QuestionBank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionBank.m; sourceTree = "<group>"; };
 		17DD7CA420DED85C0041516B /* QuizParentAppBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizParentAppBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DD7CA720DED85C0041516B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17DD7CA820DED85C0041516B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +89,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1712256520E1B80200D4CE81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17DD7CC320DEE4680041516B /* AppDelegate.swift */,
+				17DD7CC520DEE4680041516B /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1712256620E1B80D00D4CE81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1712256720E1B81200D4CE81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1712256B20E1B9EC00D4CE81 /* Question.swift */,
+				1712256D20E1BC3C00D4CE81 /* QuestionBank.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1712256820E1B81C00D4CE81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17DD7CD920DEE47C0041516B /* AppDelegate.h */,
+				17DD7CDA20DEE47C0041516B /* AppDelegate.m */,
+				17DD7CDC20DEE47C0041516B /* MainViewController.h */,
+				17DD7CDD20DEE47C0041516B /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1712256920E1B82300D4CE81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1712256A20E1B82900D4CE81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				178B6F8420E6FAA000CAE7C9 /* Question.h */,
+				178B6F8520E6FAA000CAE7C9 /* Question.m */,
+				178B6F8720E6FB8700CAE7C9 /* QuestionBank.h */,
+				178B6F8820E6FB8700CAE7C9 /* QuestionBank.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		17DD7C9B20DED85C0041516B = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +182,9 @@
 		17DD7CC220DEE4680041516B /* Quiz_Swift */ = {
 			isa = PBXGroup;
 			children = (
-				17DD7CC320DEE4680041516B /* AppDelegate.swift */,
-				17DD7CC520DEE4680041516B /* MainViewController.swift */,
+				1712256720E1B81200D4CE81 /* Model */,
+				1712256620E1B80D00D4CE81 /* View */,
+				1712256520E1B80200D4CE81 /* Controller */,
 				17DD7CCA20DEE4690041516B /* Assets.xcassets */,
 				17DD7CCC20DEE4690041516B /* LaunchScreen.storyboard */,
 				17DD7CCF20DEE4690041516B /* Info.plist */,
@@ -130,10 +195,9 @@
 		17DD7CD820DEE47C0041516B /* Quiz_ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				17DD7CD920DEE47C0041516B /* AppDelegate.h */,
-				17DD7CDA20DEE47C0041516B /* AppDelegate.m */,
-				17DD7CDC20DEE47C0041516B /* MainViewController.h */,
-				17DD7CDD20DEE47C0041516B /* MainViewController.m */,
+				1712256A20E1B82900D4CE81 /* Model */,
+				1712256920E1B82300D4CE81 /* View */,
+				1712256820E1B81C00D4CE81 /* Controller */,
 				17DD7CE220DEE47D0041516B /* Assets.xcassets */,
 				17DD7CE420DEE47D0041516B /* LaunchScreen.storyboard */,
 				17DD7CE720DEE47D0041516B /* Info.plist */,
@@ -285,6 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1712256C20E1B9EC00D4CE81 /* Question.swift in Sources */,
+				1712256E20E1BC3C00D4CE81 /* QuestionBank.swift in Sources */,
 				17DD7CC620DEE4680041516B /* MainViewController.swift in Sources */,
 				17DD7CC420DEE4680041516B /* AppDelegate.swift in Sources */,
 			);
@@ -294,7 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178B6F8920E6FB8700CAE7C9 /* QuestionBank.m in Sources */,
 				17DD7CDE20DEE47C0041516B /* MainViewController.m in Sources */,
+				178B6F8620E6FAA000CAE7C9 /* Question.m in Sources */,
 				17DD7CE920DEE47D0041516B /* main.m in Sources */,
 				17DD7CDB20DEE47C0041516B /* AppDelegate.m in Sources */,
 			);
